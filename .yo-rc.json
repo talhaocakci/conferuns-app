@@ -5,7 +5,7 @@
       "nativeLanguage": "en"
     },
     "jhipsterVersion": "5.8.2",
-    "applicationType": "microservice",
+    "applicationType": "monolithic",
     "baseName": "conferuns",
     "packageName": "com.btocakci.conferuns",
     "packageFolder": "com/btocakci/conferuns",
