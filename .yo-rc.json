@@ -46,13 +46,12 @@
     "enableTranslation": true,
     "clientPackageManager": "npm",
     "nativeLanguage": "en",
-    "languages": [
-      "en",
-      "tr"
-    ],
-    "skipClient": true,
-    "skipUserManagement": true,
+    "languages": ["en", "tr"],
+    "skipClient": false,
+    "skipUserManagement": false,
     "messageBroker": false,
-    "serviceDiscoveryType": false
+    "serviceDiscoveryType": false,
+    "clientFramework": "react",
+    "useSass": false
   }
 }

@@ -30,7 +30,8 @@ export class UserManagementDetail extends React.Component<IUserManagementDetailP
               <Translate contentKey="userManagement.login">Login</Translate>
             </dt>
             <dd>
-              <span>{user.login}</span>&nbsp;
+              <span>{user.login}</span>
+              &nbsp;
               {user.activated ? (
                 <Badge color="success">
                   <Translate contentKey="userManagement.activated">Activated</Translate>

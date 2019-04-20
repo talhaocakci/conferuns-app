@@ -13,6 +13,7 @@
     "indicator": {
       "diskSpace": "Disk alanı",
       "mail": "E-posta",
+      "elasticsearch": "Elasticsearch",
       "db": "Veritabanı"
     },
     "table": {
