@@ -8,6 +8,8 @@ services:
             - SPRING_DATASOURCE_URL=jdbc:mysql://conferuns-mysql:3306/conferuns?useUnicode=true&characterEncoding=utf8&useSSL=false
             - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
             - SPRING_DATA_JEST_URI=http://conferuns-elasticsearch:9200
+        ports:
+            - 8081:8081
     conferuns-mysql:
         extends:
             file: mysql.yml
