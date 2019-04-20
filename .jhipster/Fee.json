@@ -1,0 +1,41 @@
+{
+    "name": "Fee",
+    "fields": [
+        {
+            "fieldName": "conferenceId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "feeLabel",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fromTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "tillTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "price",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "specialTo",
+            "fieldType": "SpecialParticipantType",
+            "fieldValues": "STUDENT,DISABLE,WOMAN,VETERAN"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190420041231",
+    "entityTableName": "fee",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "conferuns",
+    "applications": "*",
+    "microserviceName": "conferuns"
+}

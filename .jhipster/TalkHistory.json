@@ -1,0 +1,63 @@
+{
+    "name": "TalkHistory",
+    "fields": [
+        {
+            "fieldName": "date",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "totalAudience",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "totalTechnicalPoints",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "averageTechnicalPoints",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "totalSpeakingPoints",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "averageSpeakingPoints",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "totalExcitementPoints",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "averageExcitementPoints",
+            "fieldType": "Double"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "presenter",
+            "otherEntityName": "presenter",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "talk",
+            "otherEntityRelationshipName": "talkHistory",
+            "relationshipName": "talk",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20190420041234",
+    "entityTableName": "talk_history",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "conferuns",
+    "applications": "*",
+    "microserviceName": "conferuns"
+}

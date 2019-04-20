@@ -1,0 +1,28 @@
+{
+    "name": "Topic",
+    "fields": [
+        {
+            "fieldName": "category",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "subCategory",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "topicName",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190420041228",
+    "entityTableName": "topic",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "conferuns",
+    "applications": "*",
+    "microserviceName": "conferuns"
+}

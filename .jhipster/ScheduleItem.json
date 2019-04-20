@@ -1,0 +1,39 @@
+{
+    "name": "ScheduleItem",
+    "fields": [
+        {
+            "fieldName": "fromTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "tillTime",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "conference",
+            "otherEntityName": "conference",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "talk",
+            "otherEntityRelationshipName": "scheduleItem",
+            "relationshipName": "talk",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20190420041230",
+    "entityTableName": "schedule_item",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "conferuns",
+    "applications": "*",
+    "microserviceName": "conferuns"
+}
