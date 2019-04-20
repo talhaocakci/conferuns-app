@@ -13,27 +13,12 @@
 # http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 # ===================================================================
 
-eureka:
-    client:
-        enabled: false
-    instance:
-        appname: conferuns
-        instanceId: conferuns:${spring.application.instance-id:${random.value}}
 
 spring:
     application:
         name: conferuns
     cache:
         type: simple
-    cloud:
-        stream:
-            kafka:
-                binder:
-                    brokers: localhost
-                    zk-nodes: localhost
-            bindings:
-                output:
-                    destination: topic-jhipster
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
         url: jdbc:h2:mem:conferuns;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE

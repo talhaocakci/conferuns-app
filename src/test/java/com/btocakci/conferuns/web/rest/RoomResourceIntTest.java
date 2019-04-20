@@ -50,9 +50,6 @@ public class RoomResourceIntTest {
     private static final Long DEFAULT_ROOM_ID = 1L;
     private static final Long UPDATED_ROOM_ID = 2L;
 
-    private static final Long DEFAULT_PLACE_ID = 1L;
-    private static final Long UPDATED_PLACE_ID = 2L;
-
     private static final String DEFAULT_ROOM_NAME = "AAAAAAAAAA";
     private static final String UPDATED_ROOM_NAME = "BBBBBBBBBB";
 
@@ -119,7 +116,6 @@ public class RoomResourceIntTest {
     public static Room createEntity(EntityManager em) {
         Room room = new Room()
             .roomId(DEFAULT_ROOM_ID)
-            .placeId(DEFAULT_PLACE_ID)
             .roomName(DEFAULT_ROOM_NAME)
             .floor(DEFAULT_FLOOR)
             .capacity(DEFAULT_CAPACITY);
@@ -148,7 +144,6 @@ public class RoomResourceIntTest {
         assertThat(roomList).hasSize(databaseSizeBeforeCreate + 1);
         Room testRoom = roomList.get(roomList.size() - 1);
         assertThat(testRoom.getRoomId()).isEqualTo(DEFAULT_ROOM_ID);
-        assertThat(testRoom.getPlaceId()).isEqualTo(DEFAULT_PLACE_ID);
         assertThat(testRoom.getRoomName()).isEqualTo(DEFAULT_ROOM_NAME);
         assertThat(testRoom.getFloor()).isEqualTo(DEFAULT_FLOOR);
         assertThat(testRoom.getCapacity()).isEqualTo(DEFAULT_CAPACITY);
@@ -192,7 +187,6 @@ public class RoomResourceIntTest {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(room.getId().intValue())))
             .andExpect(jsonPath("$.[*].roomId").value(hasItem(DEFAULT_ROOM_ID.intValue())))
-            .andExpect(jsonPath("$.[*].placeId").value(hasItem(DEFAULT_PLACE_ID.intValue())))
             .andExpect(jsonPath("$.[*].roomName").value(hasItem(DEFAULT_ROOM_NAME.toString())))
             .andExpect(jsonPath("$.[*].floor").value(hasItem(DEFAULT_FLOOR)))
             .andExpect(jsonPath("$.[*].capacity").value(hasItem(DEFAULT_CAPACITY)));
@@ -210,7 +204,6 @@ public class RoomResourceIntTest {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.id").value(room.getId().intValue()))
             .andExpect(jsonPath("$.roomId").value(DEFAULT_ROOM_ID.intValue()))
-            .andExpect(jsonPath("$.placeId").value(DEFAULT_PLACE_ID.intValue()))
             .andExpect(jsonPath("$.roomName").value(DEFAULT_ROOM_NAME.toString()))
             .andExpect(jsonPath("$.floor").value(DEFAULT_FLOOR))
             .andExpect(jsonPath("$.capacity").value(DEFAULT_CAPACITY));
@@ -238,7 +231,6 @@ public class RoomResourceIntTest {
         em.detach(updatedRoom);
         updatedRoom
             .roomId(UPDATED_ROOM_ID)
-            .placeId(UPDATED_PLACE_ID)
             .roomName(UPDATED_ROOM_NAME)
             .floor(UPDATED_FLOOR)
             .capacity(UPDATED_CAPACITY);
@@ -254,7 +246,6 @@ public class RoomResourceIntTest {
         assertThat(roomList).hasSize(databaseSizeBeforeUpdate);
         Room testRoom = roomList.get(roomList.size() - 1);
         assertThat(testRoom.getRoomId()).isEqualTo(UPDATED_ROOM_ID);
-        assertThat(testRoom.getPlaceId()).isEqualTo(UPDATED_PLACE_ID);
         assertThat(testRoom.getRoomName()).isEqualTo(UPDATED_ROOM_NAME);
         assertThat(testRoom.getFloor()).isEqualTo(UPDATED_FLOOR);
         assertThat(testRoom.getCapacity()).isEqualTo(UPDATED_CAPACITY);
@@ -319,7 +310,6 @@ public class RoomResourceIntTest {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(room.getId().intValue())))
             .andExpect(jsonPath("$.[*].roomId").value(hasItem(DEFAULT_ROOM_ID.intValue())))
-            .andExpect(jsonPath("$.[*].placeId").value(hasItem(DEFAULT_PLACE_ID.intValue())))
             .andExpect(jsonPath("$.[*].roomName").value(hasItem(DEFAULT_ROOM_NAME)))
             .andExpect(jsonPath("$.[*].floor").value(hasItem(DEFAULT_FLOOR)))
             .andExpect(jsonPath("$.[*].capacity").value(hasItem(DEFAULT_CAPACITY)));

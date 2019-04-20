@@ -29,9 +29,6 @@ public class Room implements Serializable {
     @Column(name = "room_id")
     private Long roomId;
 
-    @Column(name = "place_id")
-    private Long placeId;
-
     @Column(name = "room_name")
     private String roomName;
 
@@ -65,19 +62,6 @@ public class Room implements Serializable {
 
     public void setRoomId(Long roomId) {
         this.roomId = roomId;
-    }
-
-    public Long getPlaceId() {
-        return placeId;
-    }
-
-    public Room placeId(Long placeId) {
-        this.placeId = placeId;
-        return this;
-    }
-
-    public void setPlaceId(Long placeId) {
-        this.placeId = placeId;
     }
 
     public String getRoomName() {
@@ -158,7 +142,6 @@ public class Room implements Serializable {
         return "Room{" +
             "id=" + getId() +
             ", roomId=" + getRoomId() +
-            ", placeId=" + getPlaceId() +
             ", roomName='" + getRoomName() + "'" +
             ", floor=" + getFloor() +
             ", capacity=" + getCapacity() +

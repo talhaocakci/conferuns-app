@@ -6,10 +6,6 @@
             "fieldType": "Long"
         },
         {
-            "fieldName": "placeId",
-            "fieldType": "Long"
-        },
-        {
             "fieldName": "roomName",
             "fieldType": "String"
         },

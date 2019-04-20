@@ -11,8 +11,6 @@ public class RoomDTO implements Serializable {
 
     private Long roomId;
 
-    private Long placeId;
-
     private String roomName;
 
     private Integer floor;
@@ -36,14 +34,6 @@ public class RoomDTO implements Serializable {
 
     public void setRoomId(Long roomId) {
         this.roomId = roomId;
-    }
-
-    public Long getPlaceId() {
-        return placeId;
-    }
-
-    public void setPlaceId(Long placeId) {
-        this.placeId = placeId;
     }
 
     public String getRoomName() {
@@ -104,7 +94,6 @@ public class RoomDTO implements Serializable {
         return "RoomDTO{" +
             "id=" + getId() +
             ", roomId=" + getRoomId() +
-            ", placeId=" + getPlaceId() +
             ", roomName='" + getRoomName() + "'" +
             ", floor=" + getFloor() +
             ", capacity=" + getCapacity() +

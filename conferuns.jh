@@ -26,7 +26,6 @@ entity Place {
 
 entity Room {
 	roomId Long,
-    placeId Long, // in which place
     roomName String,
     floor Integer,
     capacity Integer

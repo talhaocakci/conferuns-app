@@ -19,13 +19,6 @@ logging:
         io.github.jhipster: DEBUG
         com.btocakci.conferuns: DEBUG
 
-eureka:
-    instance:
-        prefer-ip-address: true
-    client:
-        service-url:
-            defaultZone: http://admin:${jhipster.registry.password}@localhost:8761/eureka/
-
 spring:
     profiles:
         active: dev
@@ -42,15 +35,6 @@ spring:
     jackson:
         serialization:
             indent-output: true
-    cloud:
-        stream:
-            kafka:
-                binder:
-                    brokers: localhost
-                    zk-nodes: localhost
-            bindings:
-                output:
-                    destination: topic-jhipster
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
         url: jdbc:h2:file:./target/h2db/db/conferuns;DB_CLOSE_DELAY=-1
