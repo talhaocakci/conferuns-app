@@ -51,10 +51,7 @@ export class RegisterPage extends React.Component<IRegisterProps, IRegisterState
                 placeholder={translate('global.form.username.placeholder')}
                 validate={{
                   required: { value: true, errorMessage: translate('register.messages.validate.login.required') },
-                  pattern: {
-                    value: '^[_.@A-Za-z0-9-]*$',
-                    errorMessage: translate('register.messages.validate.login.pattern')
-                  },
+                  pattern: { value: '^[_.@A-Za-z0-9-]*$', errorMessage: translate('register.messages.validate.login.pattern') },
                   minLength: { value: 1, errorMessage: translate('register.messages.validate.login.minlength') },
                   maxLength: { value: 50, errorMessage: translate('register.messages.validate.login.maxlength') }
                 }}
