@@ -1,0 +1,26 @@
+{
+  "conferunsApp": {
+    "conferunsFileReview": {
+      "home": {
+        "title": "File Reviews",
+        "createLabel": "Create a new File Review",
+        "createOrEditLabel": "Create or edit a File Review",
+        "search": "Search for File Review"
+      },
+      "created": "A new File Review is created with identifier {{ param }}",
+      "updated": "A File Review is updated with identifier {{ param }}",
+      "deleted": "A File Review is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete File Review {{ id }}?"
+      },
+      "detail": {
+        "title": "File Review"
+      },
+      "date": "Date",
+      "comment": "Comment",
+      "reviewer": "Reviewer",
+      "status": "Status",
+      "file": "File"
+    }
+  }
+}

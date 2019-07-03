@@ -52,6 +52,7 @@
     "messageBroker": false,
     "serviceDiscoveryType": false,
     "clientFramework": "react",
-    "useSass": false
+    "useSass": false,
+    "skipServer": true
   }
 }

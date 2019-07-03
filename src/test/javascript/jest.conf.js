@@ -4,7 +4,7 @@ module.exports = {
   },
   rootDir: '../../../',
   testURL: 'http://localhost/',
-  coverageDirectory: '<rootDir>/target/test-results/',
+  coverageDirectory: '<rootDir>/build/test-results/',
   testMatch: ['<rootDir>/src/test/javascript/spec/**/+(*.)+(spec.ts?(x))'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   coveragePathIgnorePatterns: [
@@ -16,7 +16,7 @@ module.exports = {
   },
   reporters: [
     'default',
-    [ 'jest-junit', { output: './target/test-results/TESTS-results-jest.xml' } ]
+    [ 'jest-junit', { output: './build/test-results/TESTS-results-jest.xml' } ]
   ],
   testResultsProcessor: 'jest-sonar-reporter',
   testPathIgnorePatterns: [

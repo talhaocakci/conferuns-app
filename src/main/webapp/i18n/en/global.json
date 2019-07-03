@@ -7,6 +7,20 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entities",
+        "conferunsConference": "Conference",
+        "conferunsFee": "Fee",
+        "conferunsFile": "File",
+        "conferunsFileReview": "File Review",
+        "conferunsPlace": "Place",
+        "conferunsPresenter": "Presenter",
+        "conferunsRoom": "Room",
+        "conferunsScheduleItem": "Schedule Item",
+        "conferunsSubject": "Subject",
+        "conferunsTalk": "Talk",
+        "conferunsTalkParticipant": "Talk Participant",
+        "conferunsTalkTag": "Talk Tag",
+        "conferunsTopic": "Topic",
+        "conferunsTalkHistory": "Talk History",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {
@@ -98,7 +112,8 @@
       "edit": "Edit",
       "open": "Open",
       "save": "Save",
-      "view": "View"
+      "view": "View",
+      "savecontinue": "Save and Continue"
     },
     "detail": {
       "field": "Field",
