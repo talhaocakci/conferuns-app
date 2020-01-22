@@ -1,17 +1,38 @@
-name: Java CI
+name: Docker Image CI
 
-on: [push]
+on:
+    push:
+        branches:
+            - master
+
+env:
+    IMAGE_NAME: conferuns-auth
 
 jobs:
-  build:
 
-    runs-on: ubuntu-latest
+    build:
 
-    steps:
-    - uses: actions/checkout@v1
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v1
+            - name: Set up JDK 1.8
+              uses: actions/setup-java@v1
+              with:
+                  java-version: 1.8
+            - name: Build with Maven
+              run: mvn -B package --file pom.xml
+            - name: Build the Docker image
+              run: docker build . --file src/main/docker/Dockerfile --tag docker.pkg.github.com/${{ github.repository }}/$IMAGE_NAME
+            - name : Login to docker registry
+              run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            - name: Push image
+              run: |
+                  IMAGE_REPO=docker.pkg.github.com/${{ github.repository }}
+                  # Strip git ref prefix from version
+                  VERSION=$(date +%s)
+                  echo IMAGE_REPO=$IMAGE_REPO
+                  echo VERSION=$VERSION
+                  docker push $IMAGE_REPO/$IMAGE_NAME:latest
