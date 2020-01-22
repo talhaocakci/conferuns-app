@@ -4,15 +4,17 @@ ENV SPRING_OUTPUT_ANSI_ENABLED=ALWAYS \
     JHIPSTER_SLEEP=0 \
     JAVA_OPTS=""
 
-# Add a jhipster user to run our application so that it doesn't need to run as root
-RUN adduser -D -s /bin/sh jhipster
-WORKDIR /home/jhipster
+RUN adduser -D -s /bin/sh urla
+WORKDIR /home/urla
 
-ADD entrypoint.sh entrypoint.sh
-RUN chmod 755 entrypoint.sh && chown jhipster:jhipster entrypoint.sh
-USER jhipster
+ADD src/main/docker/entrypoint.sh /home/urla/entrypoint.sh
+RUN chmod 755 entrypoint.sh && chown urla:urla /home/urla/entrypoint.sh
 
-ENTRYPOINT ["./entrypoint.sh"]
+RUN apk update && apk add bash
+
+USER urla
+
+ENTRYPOINT ["/home/urla/entrypoint.sh"]
 
 EXPOSE 8081 5701/udp
 
