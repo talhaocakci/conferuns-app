@@ -6,7 +6,7 @@ on:
             - master
 
 env:
-    IMAGE_NAME: conferuns-auth
+    IMAGE_NAME: conferuns-app
 
 jobs:
 
