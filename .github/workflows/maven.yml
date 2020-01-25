@@ -38,7 +38,7 @@ jobs:
                   echo VERSION=$VERSION
                   docker push $IMAGE_REPO/$IMAGE_NAME:latest
             - name: Build Web Docker image
-              run: docker build . --file src/main/docker/Dockerfile --tag docker.pkg.github.com/${{ github.repository }}/IMAGE_WEB_NAME
+              run: docker build . --file src/main/docker/Dockerfile --tag docker.pkg.github.com/${{ github.repository }}/$IMAGE_WEB_NAME
             - name : Login to docker registry
               run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
               env:
@@ -50,5 +50,5 @@ jobs:
                   VERSION=$(date +%s)
                   echo IMAGE_REPO=$IMAGE_REPO
                   echo VERSION=$VERSION
-                  docker push $IMAGE_REPO/IMAGE_WEB_NAME:latest
+                  docker push $IMAGE_REPO/$IMAGE_WEB_NAME:latest
 
