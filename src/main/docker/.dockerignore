@@ -12,3 +12,4 @@ test-results/
 www/
 !*.jar
 !*.war
+node_modules
