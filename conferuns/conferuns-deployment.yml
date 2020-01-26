@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: conferuns
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: conferuns
+  template:
+    metadata:
+      labels:
+        app: conferuns
+    spec:
+      containers:
+      - name: conferuns-app
+        imagePullPolicy: Always
+        image: docker.pkg.github.com/talhaocakci/conferuns-app/conferuns:latest
+        env:
+        - name: SPRING_PROFILES_ACTIVE
+          value: prod,no-liquibase
+        - name: JHIPSTER_SECURITY_AUTHENTICATION_JWT_BASE64_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: jwt-secret
+              key: secret
+        - name: spring.datasource.url
+          value: jdbc:mysql://mysql-service:3306/conferuns?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC
+        - name: spring.datasource.password
+          value: Ben7tpliyimvallahALanbak2seferdirtersgidiyosuNHadiBuyur1900!
+        - name: JAVA_OPTS
+          value: " -Xmx256m -Xms256m"
+        - name: spring.data.elasticsearch.cluster-nodes
+          value: conferuns-elasticsearch:9300
+        - name: spring.data.jest.uri
+          value: http://conferuns-elasticsearch:9200
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "100m"
+          limits:
+            memory: "512Mi"
+            cpu: "1"
+      imagePullSecrets:
+          - name: myregistrycred

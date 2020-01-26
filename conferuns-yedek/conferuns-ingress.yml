@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: conferuns
+  namespace: default
+spec:
+  rules:
+  - host: conferuns.urla.io
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: conferuns
+          servicePort: 8081
