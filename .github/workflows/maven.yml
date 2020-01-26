@@ -6,8 +6,7 @@ on:
             - master
 
 env:
-    IMAGE_NAME: conferuns-app
-    IMAGE_WEB_NAME: conferuns-web
+    IMAGE_WEB_NAME: conferuns
 
 jobs:
 
@@ -22,23 +21,7 @@ jobs:
               with:
                   java-version: 1.8
             - name: Build with Maven
-              run: mvn -B package -DskipTests --file pom.xml
-            - name: Build the Docker image
-              run: docker build . --file src/main/docker/Dockerfile --tag docker.pkg.github.com/${{ github.repository }}/$IMAGE_NAME
-            - name : Login to docker registry
-              run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            - name: Push image
-              run: |
-                  IMAGE_REPO=docker.pkg.github.com/${{ github.repository }}
-                  # Strip git ref prefix from version
-                  VERSION=$(date +%s)
-                  echo IMAGE_REPO=$IMAGE_REPO
-                  echo VERSION=$VERSION
-                  docker push $IMAGE_REPO/$IMAGE_NAME:latest
-            - name: Build Web Docker image
-              run: docker build . --file src/main/docker/Dockerfile-Webapp --tag docker.pkg.github.com/${{ github.repository }}/$IMAGE_WEB_NAME
+              run:  ./mvnw package -DskipTests -Pprod verify jib:dockerBuild
             - name : Login to docker registry
               run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
               env:

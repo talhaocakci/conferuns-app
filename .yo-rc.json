@@ -53,6 +53,16 @@
     "serviceDiscoveryType": false,
     "clientFramework": "react",
     "useSass": false,
-    "skipServer": true
+    "skipServer": true,
+    "appsFolders": ["conferuns-app"],
+    "directoryPath": "../",
+    "dockerRepositoryName": "",
+    "dockerPushCommand": "docker push",
+    "kubernetesNamespace": "default",
+    "kubernetesServiceType": "Ingress",
+    "ingressDomain": "urla.io",
+    "monitoring": "no",
+    "istio": "no",
+    "istioRoute": false
   }
 }
