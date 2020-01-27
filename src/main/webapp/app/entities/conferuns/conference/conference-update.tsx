@@ -285,11 +285,6 @@ export class ConferenceUpdate extends React.Component<IConferenceUpdateProps, IC
                   &nbsp;
                   <Translate contentKey="entity.action.save">Save</Translate>
                 </Button>
-                <Button color="primary" id="save-continue" type="submit">
-                  <span className="d-none d-md-inline">
-                    <Translate contentKey="entity.action.savecontinue">Save Continue</Translate>
-                  </span>
-                </Button>
               </AvForm>
             )}
           </Col>
