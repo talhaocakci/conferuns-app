@@ -21,7 +21,7 @@ jobs:
               with:
                   java-version: 1.8
             - name: Build with Maven
-              run:  ./mvnw package -DskipTests -Pprod verify jib:dockerBuild
+              run:  ./mvnw clean package -DskipTests -Pprod verify jib:dockerBuild
             - name: Build the Docker image
               run: docker build . --file src/main/docker/Dockerfile --tag docker.pkg.github.com/${{ github.repository }}/$IMAGE_WEB_NAME
             - name : Login to docker registry

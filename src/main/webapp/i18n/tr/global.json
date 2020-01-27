@@ -7,20 +7,6 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Varlıklar",
-        "conferunsConference": "Conference",
-        "conferunsFee": "Fee",
-        "conferunsFile": "File",
-        "conferunsFileReview": "File Review",
-        "conferunsPlace": "Place",
-        "conferunsPresenter": "Presenter",
-        "conferunsRoom": "Room",
-        "conferunsScheduleItem": "Schedule Item",
-        "conferunsSubject": "Subject",
-        "conferunsTalk": "Talk",
-        "conferunsTalkParticipant": "Talk Participant",
-        "conferunsTalkTag": "Talk Tag",
-        "conferunsTopic": "Topic",
-        "conferunsTalkHistory": "Talk History",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {
@@ -112,8 +98,7 @@
       "edit": "Düzenle",
       "open": "Aç",
       "save": "Kaydet",
-      "view": "Görüntüle",
-      "savecontinue": "Kaydet ve devam et"
+      "view": "Görüntüle"
     },
     "detail": {
       "field": "Alan",
@@ -121,9 +106,6 @@
     },
     "delete": {
       "title": "Silme işlemini onayla"
-    },
-    "buttons": {
-      "savecontinue": "Kaydet ve devam et"
     },
     "validation": {
       "required": "Bu alan gerekli.",
