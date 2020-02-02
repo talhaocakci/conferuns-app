@@ -31,8 +31,6 @@ spec:
           value: Ben7tpliyimvallahALanbak2seferdirtersgidiyosuNHadiBuyur1900!
         - name: JAVA_OPTS
           value: " -Xmx256m -Xms256m"
-        - name: spring.data.elasticsearch.cluster-nodes
-          value: conferuns-elasticsearch:9300
         - name: spring.data.jest.uri
           value: http://conferuns-elasticsearch:9200
         resources:

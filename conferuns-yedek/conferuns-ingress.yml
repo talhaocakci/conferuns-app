@@ -14,15 +14,15 @@ spec:
           servicePort: 8081
   - host: mysql.urla.io
     http:
-        paths:
-            - path: /
-              backend:
-                  serviceName: mysql-service
-                  servicePort: 3306
+      paths:
+        - path: /
+          backend:
+          serviceName: mysql-service
+          servicePort: 3306
   - host: elastic.urla.io
     http:
-        paths:
-            - path: /
-              backend:
-                  serviceName: conferuns-elasticsearch
-                  servicePort: 9200
+      paths:
+        - path: /
+          backend:
+            serviceName: conferuns-elasticsearch
+            servicePort: 9200
