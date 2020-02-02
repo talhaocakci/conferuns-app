@@ -1,20 +1,16 @@
 version: '2'
 services:
-    conferuns-app:
-        image: conferuns
-        environment:
-            - _JAVA_OPTIONS=-Xmx512m -Xms256m
-            - SPRING_PROFILES_ACTIVE=prod,swagger
-            - SPRING_DATASOURCE_URL=jdbc:mysql://conferuns-mysql:3306/conferuns?useUnicode=true&characterEncoding=utf8&useSSL=false
-            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
-            - SPRING_DATA_JEST_URI=http://conferuns-elasticsearch:9200
-        ports:
-            - 8081:8081
-    conferuns-mysql:
-        extends:
-            file: mysql.yml
-            service: conferuns-mysql
-    conferuns-elasticsearch:
-        extends:
-            file: elasticsearch.yml
-            service: conferuns-elasticsearch
+  conferuns-app:
+    image: conferuns
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - SPRING_PROFILES_ACTIVE=prod,swagger
+      - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
+      - SPRING_DATASOURCE_URL=jdbc:mysql://conferuns-mysql:3306/conferuns?useUnicode=true&characterEncoding=utf8&useSSL=false&createDatabaseIfNotExist=true
+      - JHIPSTER_SLEEP=30 # gives time for other services to boot before the application
+    ports:
+      - 8080:8080
+  conferuns-mysql:
+    extends:
+      file: mysql.yml
+      service: conferuns-mysql

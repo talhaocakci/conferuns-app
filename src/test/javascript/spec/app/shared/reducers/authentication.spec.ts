@@ -153,7 +153,7 @@ describe('Authentication reducer tests', () => {
 
     const resolvedObject = { value: 'whatever' };
     beforeEach(() => {
-      const mockStore = configureStore([thunk, promiseMiddleware()]);
+      const mockStore = configureStore([thunk, promiseMiddleware]);
       store = mockStore({ authentication: { account: { langKey: 'en' } } });
       axios.get = sinon.stub().returns(Promise.resolve(resolvedObject));
     });
@@ -172,7 +172,8 @@ describe('Authentication reducer tests', () => {
           locale: 'en'
         }
       ];
-      await store.dispatch(getSession()).then(() => expect(store.getActions()).toEqual(expectedActions));
+      await store.dispatch(getSession());
+      expect(store.getActions()).toEqual(expectedActions);
     });
 
     it('dispatches LOGOUT actions', async () => {
@@ -222,13 +223,14 @@ describe('Authentication reducer tests', () => {
           locale: 'en'
         }
       ];
-      await store.dispatch(login('test', 'test')).then(() => expect(store.getActions()).toEqual(expectedActions));
+      await store.dispatch(login('test', 'test'));
+      expect(store.getActions()).toEqual(expectedActions);
     });
   });
   describe('clearAuthToken', () => {
     let store;
     beforeEach(() => {
-      const mockStore = configureStore([thunk, promiseMiddleware()]);
+      const mockStore = configureStore([thunk, promiseMiddleware]);
       store = mockStore({ authentication: { account: { langKey: 'en' } } });
     });
     it('clears the session token on clearAuthToken', async () => {
@@ -236,26 +238,24 @@ describe('Authentication reducer tests', () => {
       const loginResponse = { headers: { authorization: 'Bearer TestToken' } };
       axios.post = sinon.stub().returns(Promise.resolve(loginResponse));
 
-      await store.dispatch(login('test', 'test')).then(() => {
-        expect(Storage.session.get(AUTH_TOKEN_KEY)).toBe('TestToken');
-        expect(Storage.local.get(AUTH_TOKEN_KEY)).toBe(undefined);
-        clearAuthToken();
-        expect(Storage.session.get(AUTH_TOKEN_KEY)).toBe(undefined);
-        expect(Storage.local.get(AUTH_TOKEN_KEY)).toBe(undefined);
-      });
+      await store.dispatch(login('test', 'test'));
+      expect(Storage.session.get(AUTH_TOKEN_KEY)).toBe('TestToken');
+      expect(Storage.local.get(AUTH_TOKEN_KEY)).toBe(undefined);
+      clearAuthToken();
+      expect(Storage.session.get(AUTH_TOKEN_KEY)).toBe(undefined);
+      expect(Storage.local.get(AUTH_TOKEN_KEY)).toBe(undefined);
     });
     it('clears the local storage token on clearAuthToken', async () => {
       const AUTH_TOKEN_KEY = 'jhi-authenticationToken';
       const loginResponse = { headers: { authorization: 'Bearer TestToken' } };
       axios.post = sinon.stub().returns(Promise.resolve(loginResponse));
 
-      await store.dispatch(login('user', 'user', true)).then(() => {
-        expect(Storage.session.get(AUTH_TOKEN_KEY)).toBe(undefined);
-        expect(Storage.local.get(AUTH_TOKEN_KEY)).toBe('TestToken');
-        clearAuthToken();
-        expect(Storage.session.get(AUTH_TOKEN_KEY)).toBe(undefined);
-        expect(Storage.local.get(AUTH_TOKEN_KEY)).toBe(undefined);
-      });
+      await store.dispatch(login('user', 'user', true));
+      expect(Storage.session.get(AUTH_TOKEN_KEY)).toBe(undefined);
+      expect(Storage.local.get(AUTH_TOKEN_KEY)).toBe('TestToken');
+      clearAuthToken();
+      expect(Storage.session.get(AUTH_TOKEN_KEY)).toBe(undefined);
+      expect(Storage.local.get(AUTH_TOKEN_KEY)).toBe(undefined);
     });
   });
 });
