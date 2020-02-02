@@ -1,0 +1,37 @@
+{
+    "name": "TalkParticipant",
+    "fields": [
+        {
+            "fieldName": "checkedIn",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "plannedToGo",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "favorited",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "talk",
+            "otherEntityRelationshipName": "participants",
+            "relationshipName": "talks",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20190420041232",
+    "entityTableName": "talk_participant",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "conferuns",
+    "applications": "*",
+    "microserviceName": "conferuns"
+}

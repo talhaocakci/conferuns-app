@@ -1,0 +1,85 @@
+{
+    "name": "Conference",
+    "fields": [
+        {
+            "fieldName": "conferenceId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "mainName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "subName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "mainTopic",
+            "fieldType": "ConferenceTopic",
+            "fieldValues": "SOFTWARE_ENGINEERING,FINANCE,SPORTS"
+        },
+        {
+            "fieldName": "subTopic",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "isFree",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "language",
+            "fieldType": "Language",
+            "fieldValues": "ENGLISH,TURKISH,FRENCH,SPANISH"
+        },
+        {
+            "fieldName": "startDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "endDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "lastTalkSubmissionTime",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "scheduleItem",
+            "otherEntityRelationshipName": "conference",
+            "relationshipName": "scheduleItems"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "place",
+            "otherEntityRelationshipName": "conferences",
+            "relationshipName": "places",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "talk",
+            "otherEntityRelationshipName": "conferences",
+            "relationshipName": "talks",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20190420041221",
+    "entityTableName": "conference",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "conferuns",
+    "applications": "*",
+    "microserviceName": "conferuns"
+}

@@ -1,0 +1,23 @@
+{
+  "conferunsApp": {
+    "conferunsTalkTag": {
+      "home": {
+        "title": "Talk Tags",
+        "createLabel": "Create a new Talk Tag",
+        "createOrEditLabel": "Create or edit a Talk Tag",
+        "search": "Search for Talk Tag"
+      },
+      "created": "A new Talk Tag is created with identifier {{ param }}",
+      "updated": "A Talk Tag is updated with identifier {{ param }}",
+      "deleted": "A Talk Tag is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Talk Tag {{ id }}?"
+      },
+      "detail": {
+        "title": "Talk Tag"
+      },
+      "tag": "Tag",
+      "talk": "Talk"
+    }
+  }
+}

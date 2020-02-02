@@ -1,0 +1,59 @@
+{
+    "name": "Presenter",
+    "fields": [
+        {
+            "fieldName": "presenterId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "totalTechnicalPoints",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "averageTechnicalPoints",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "totalSpeakingPoints",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "averageSpeakingPoints",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "totalExcitementPoints",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "averageExcitementPoints",
+            "fieldType": "Double"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "user",
+            "otherEntityRelationshipName": "presenter",
+            "relationshipName": "user",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "talkHistory",
+            "otherEntityRelationshipName": "presenter",
+            "relationshipName": "talks"
+        }
+    ],
+    "changelogDate": "20190420041233",
+    "entityTableName": "presenter",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "conferuns",
+    "applications": "*",
+    "microserviceName": "conferuns"
+}

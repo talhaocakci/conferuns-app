@@ -1,0 +1,30 @@
+{
+    "name": "Subject",
+    "fields": [
+        {
+            "fieldName": "topic",
+            "fieldType": "ConferenceTopic",
+            "fieldValues": "SOFTWARE_ENGINEERING,FINANCE,SPORTS"
+        },
+        {
+            "fieldName": "difficulty",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "audience",
+            "fieldType": "Audience",
+            "fieldValues": "BEGINNER,MID_LEVEL,EXPERIENCED"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190420041229",
+    "entityTableName": "subject",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "conferuns",
+    "applications": "*",
+    "microserviceName": "conferuns"
+}

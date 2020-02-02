@@ -1,0 +1,25 @@
+{
+  "conferunsApp": {
+    "conferunsTalkParticipant": {
+      "home": {
+        "title": "Talk Participants",
+        "createLabel": "Create a new Talk Participant",
+        "createOrEditLabel": "Create or edit a Talk Participant",
+        "search": "Search for Talk Participant"
+      },
+      "created": "A new Talk Participant is created with identifier {{ param }}",
+      "updated": "A Talk Participant is updated with identifier {{ param }}",
+      "deleted": "A Talk Participant is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Talk Participant {{ id }}?"
+      },
+      "detail": {
+        "title": "Talk Participant"
+      },
+      "checkedIn": "Checked In",
+      "plannedToGo": "Planned To Go",
+      "favorited": "Favorited",
+      "talks": "Talks"
+    }
+  }
+}

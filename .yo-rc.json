@@ -1,0 +1,73 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.btocakci.conferuns",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "5.8.2",
+    "applicationType": "monolith",
+    "baseName": "conferuns",
+    "packageName": "com.btocakci.conferuns",
+    "packageFolder": "com/btocakci/conferuns",
+    "serverPort": "8081",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "searchEngine": "elasticsearch",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": true,
+    "jwtSecretKey": "MDRiYjI4NTY4OTdlNDU1YzEyZTFmYmFhYTcyMjEzZTcyN2ViNmZlOGQyNzhmYzNmNzgyM2U2NDUzM2I2MDg3MGExOGY5OTQ1MDlhODI1ZmI2M2Y2NThlZmU5YWFkZDc1MmJkNmYwNDUwMWMwMGNlY2ZlZjhlMGNlY2RlNTMzNTg=",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [
+      {
+        "name": "generator-jhipster-docker",
+        "version": "2.5.0"
+      },
+      {
+        "name": "generator-jhipster-swagger-cli",
+        "version": "3.0.1"
+      },
+      {
+        "name": "generator-jhipster-stripe-payment",
+        "version": "1.0.9"
+      },
+      {
+        "name": "generator-jhipster-social-login-api",
+        "version": "0.0.1"
+      }
+    ],
+    "enableTranslation": true,
+    "clientPackageManager": "npm",
+    "nativeLanguage": "en",
+    "languages": [
+      "en",
+      "tr"
+    ],
+    "skipClient": false,
+    "skipUserManagement": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "clientFramework": "react",
+    "useSass": false,
+    "skipServer": true,
+    "appsFolders": [
+      "conferuns-app"
+    ],
+    "directoryPath": "../",
+    "dockerRepositoryName": "",
+    "dockerPushCommand": "docker push",
+    "kubernetesNamespace": "default",
+    "kubernetesServiceType": "Ingress",
+    "ingressDomain": "urla.io",
+    "monitoring": "no",
+    "istio": "no",
+    "istioRoute": false
+  }
+}

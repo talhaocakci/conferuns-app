@@ -1,0 +1,31 @@
+{
+  "conferunsApp": {
+    "conferunsTalkHistory": {
+      "home": {
+        "title": "Talk Histories",
+        "createLabel": "Create a new Talk History",
+        "createOrEditLabel": "Create or edit a Talk History",
+        "search": "Search for Talk History"
+      },
+      "created": "A new Talk History is created with identifier {{ param }}",
+      "updated": "A Talk History is updated with identifier {{ param }}",
+      "deleted": "A Talk History is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Talk History {{ id }}?"
+      },
+      "detail": {
+        "title": "Talk History"
+      },
+      "date": "Date",
+      "totalAudience": "Total Audience",
+      "totalTechnicalPoints": "Total Technical Points",
+      "averageTechnicalPoints": "Average Technical Points",
+      "totalSpeakingPoints": "Total Speaking Points",
+      "averageSpeakingPoints": "Average Speaking Points",
+      "totalExcitementPoints": "Total Excitement Points",
+      "averageExcitementPoints": "Average Excitement Points",
+      "presenter": "Presenter",
+      "talk": "Talk"
+    }
+  }
+}

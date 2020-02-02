@@ -1,0 +1,39 @@
+{
+    "name": "Room",
+    "fields": [
+        {
+            "fieldName": "roomId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "roomName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "floor",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "capacity",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "place",
+            "otherEntityName": "place",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190420041223",
+    "entityTableName": "room",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "conferuns",
+    "applications": "*",
+    "microserviceName": "conferuns"
+}

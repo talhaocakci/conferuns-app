@@ -1,0 +1,40 @@
+{
+    "name": "FileReview",
+    "fields": [
+        {
+            "fieldName": "date",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "comment",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "reviewer",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "FileReviewStatus",
+            "fieldValues": "NEED_MORE_REVIEW,REJECTED,APPROVED"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "file",
+            "otherEntityName": "file",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190420041227",
+    "entityTableName": "file_review",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "conferuns",
+    "applications": "*",
+    "microserviceName": "conferuns"
+}

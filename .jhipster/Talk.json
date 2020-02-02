@@ -1,0 +1,73 @@
+{
+    "name": "Talk",
+    "fields": [
+        {
+            "fieldName": "language",
+            "fieldType": "Language",
+            "fieldValues": "ENGLISH,TURKISH,FRENCH,SPANISH"
+        },
+        {
+            "fieldName": "mainTopic",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "subTopic",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "TalkStatus",
+            "fieldValues": "DRAFT,IN_REVIEW,NEED_MORE_REVIEW,REJECTED,APPROVED"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "presenter",
+            "otherEntityRelationshipName": "talk",
+            "relationshipName": "presenter",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "file",
+            "otherEntityRelationshipName": "talk",
+            "relationshipName": "files"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "talkParticipant",
+            "otherEntityRelationshipName": "talks",
+            "relationshipName": "participants",
+            "otherEntityField": "id",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "conference",
+            "otherEntityRelationshipName": "talks",
+            "relationshipName": "conferences",
+            "otherEntityField": "id",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "talkTag",
+            "otherEntityRelationshipName": "talk",
+            "relationshipName": "tags",
+            "otherEntityField": "id",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20190420041224",
+    "entityTableName": "talk",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "conferuns",
+    "applications": "*",
+    "microserviceName": "conferuns"
+}

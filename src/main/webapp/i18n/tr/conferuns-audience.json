@@ -1,0 +1,10 @@
+{
+  "conferunsApp": {
+    "Audience": {
+      "null": "",
+      "BEGINNER": "BEGINNER",
+      "MID_LEVEL": "MID_LEVEL",
+      "EXPERIENCED": "EXPERIENCED"
+    }
+  }
+}
