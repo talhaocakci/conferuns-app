@@ -36,28 +36,29 @@
     ],
     "relationships": [
         {
-            "relationshipName": "presenter",
-            "otherEntityName": "presenter",
-            "relationshipType": "many-to-one",
-            "otherEntityField": "id"
-        },
-        {
             "relationshipType": "one-to-one",
             "otherEntityName": "talk",
             "otherEntityRelationshipName": "talkHistory",
             "relationshipName": "talk",
             "otherEntityField": "id",
             "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "presenter",
+            "otherEntityRelationshipName": "talks",
+            "relationshipName": "presenter",
+            "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190420041234",
+    "changelogDate": "20200202183700",
     "entityTableName": "talk_history",
     "dto": "mapstruct",
     "pagination": "no",
     "service": "serviceImpl",
     "jpaMetamodelFiltering": false,
     "fluentMethods": true,
-    "clientRootFolder": "conferuns",
-    "applications": "*",
-    "microserviceName": "conferuns"
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
 }

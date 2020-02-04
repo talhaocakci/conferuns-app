@@ -72,14 +72,14 @@
             "ownerSide": true
         }
     ],
-    "changelogDate": "20190420041221",
+    "changelogDate": "20200202183647",
     "entityTableName": "conference",
     "dto": "mapstruct",
     "pagination": "no",
     "service": "serviceImpl",
     "jpaMetamodelFiltering": false,
     "fluentMethods": true,
-    "clientRootFolder": "conferuns",
-    "applications": "*",
-    "microserviceName": "conferuns"
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
 }

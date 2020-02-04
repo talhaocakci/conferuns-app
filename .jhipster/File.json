@@ -21,26 +21,27 @@
     ],
     "relationships": [
         {
-            "relationshipName": "talk",
-            "otherEntityName": "talk",
-            "relationshipType": "many-to-one",
-            "otherEntityField": "id"
-        },
-        {
             "relationshipType": "one-to-many",
             "otherEntityName": "fileReview",
             "otherEntityRelationshipName": "file",
             "relationshipName": "reviews"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "talk",
+            "otherEntityRelationshipName": "files",
+            "relationshipName": "talk",
+            "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190420041226",
+    "changelogDate": "20200202183652",
     "entityTableName": "file",
     "dto": "mapstruct",
     "pagination": "no",
     "service": "serviceImpl",
     "jpaMetamodelFiltering": false,
     "fluentMethods": true,
-    "clientRootFolder": "conferuns",
-    "applications": "*",
-    "microserviceName": "conferuns"
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
 }

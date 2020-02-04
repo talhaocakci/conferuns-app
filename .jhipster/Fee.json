@@ -28,14 +28,14 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190420041231",
+    "changelogDate": "20200202183657",
     "entityTableName": "fee",
     "dto": "mapstruct",
     "pagination": "no",
     "service": "serviceImpl",
     "jpaMetamodelFiltering": false,
     "fluentMethods": true,
-    "clientRootFolder": "conferuns",
-    "applications": "*",
-    "microserviceName": "conferuns"
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
 }

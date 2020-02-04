@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity TalkTag.
+    -->
+    <changeSet id="20200202183651-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="talk_tag_id"
+                                 baseTableName="talk_tag_talk"
+                                 constraintName="fk_talk_tag_talk_talk_tag_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="talk_tag"/>
+
+        <addForeignKeyConstraint baseColumnNames="talk_id"
+                                 baseTableName="talk_tag_talk"
+                                 constraintName="fk_talk_tag_talk_talk_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="talk"/>
+        
+    </changeSet>
+</databaseChangeLog>

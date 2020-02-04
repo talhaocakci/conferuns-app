@@ -46,14 +46,14 @@
             "relationshipName": "talks"
         }
     ],
-    "changelogDate": "20190420041233",
+    "changelogDate": "20200202183659",
     "entityTableName": "presenter",
     "dto": "mapstruct",
     "pagination": "no",
     "service": "serviceImpl",
     "jpaMetamodelFiltering": false,
     "fluentMethods": true,
-    "clientRootFolder": "conferuns",
-    "applications": "*",
-    "microserviceName": "conferuns"
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
 }

@@ -17,14 +17,14 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190420041229",
+    "changelogDate": "20200202183655",
     "entityTableName": "subject",
     "dto": "mapstruct",
     "pagination": "no",
     "service": "serviceImpl",
     "jpaMetamodelFiltering": false,
     "fluentMethods": true,
-    "clientRootFolder": "conferuns",
-    "applications": "*",
-    "microserviceName": "conferuns"
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
 }

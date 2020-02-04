@@ -1,0 +1,25 @@
+{
+  "conferunsApp": {
+    "scheduleItem": {
+      "home": {
+        "title": "Schedule Items",
+        "createLabel": "Create a new Schedule Item",
+        "createOrEditLabel": "Create or edit a Schedule Item",
+        "notFound": "No Schedule Items found"
+      },
+      "created": "A new Schedule Item is created with identifier {{ param }}",
+      "updated": "A Schedule Item is updated with identifier {{ param }}",
+      "deleted": "A Schedule Item is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Schedule Item {{ id }}?"
+      },
+      "detail": {
+        "title": "Schedule Item"
+      },
+      "fromTime": "From Time",
+      "tillTime": "Till Time",
+      "talk": "Talk",
+      "conference": "Conference"
+    }
+  }
+}

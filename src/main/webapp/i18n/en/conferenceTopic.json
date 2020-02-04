@@ -1,0 +1,10 @@
+{
+  "conferunsApp": {
+    "ConferenceTopic": {
+      "null": "",
+      "SOFTWARE_ENGINEERING": "SOFTWARE_ENGINEERING",
+      "FINANCE": "FINANCE",
+      "SPORTS": "SPORTS"
+    }
+  }
+}

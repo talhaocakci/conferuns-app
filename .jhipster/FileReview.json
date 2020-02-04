@@ -21,20 +21,21 @@
     ],
     "relationships": [
         {
-            "relationshipName": "file",
-            "otherEntityName": "file",
             "relationshipType": "many-to-one",
+            "otherEntityName": "file",
+            "otherEntityRelationshipName": "reviews",
+            "relationshipName": "file",
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190420041227",
+    "changelogDate": "20200202183653",
     "entityTableName": "file_review",
     "dto": "mapstruct",
     "pagination": "no",
     "service": "serviceImpl",
     "jpaMetamodelFiltering": false,
     "fluentMethods": true,
-    "clientRootFolder": "conferuns",
-    "applications": "*",
-    "microserviceName": "conferuns"
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
 }

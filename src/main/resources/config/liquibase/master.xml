@@ -14,6 +14,30 @@
     <property name="uuidType" value="varchar(36)" dbms="h2, mysql, mariadb"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200202183647_added_entity_Conference.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200202183648_added_entity_Place.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200202183649_added_entity_Room.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200202183650_added_entity_Talk.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200202183651_added_entity_TalkTag.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200202183652_added_entity_File.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200202183653_added_entity_FileReview.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200202183654_added_entity_Topic.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200202183655_added_entity_Subject.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200202183656_added_entity_ScheduleItem.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200202183657_added_entity_Fee.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200202183658_added_entity_TalkParticipant.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200202183659_added_entity_Presenter.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200202183700_added_entity_TalkHistory.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20200202183647_added_entity_constraints_Conference.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200202183649_added_entity_constraints_Room.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200202183650_added_entity_constraints_Talk.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200202183651_added_entity_constraints_TalkTag.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200202183652_added_entity_constraints_File.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200202183653_added_entity_constraints_FileReview.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200202183656_added_entity_constraints_ScheduleItem.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200202183658_added_entity_constraints_TalkParticipant.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200202183659_added_entity_constraints_Presenter.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200202183700_added_entity_constraints_TalkHistory.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

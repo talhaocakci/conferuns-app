@@ -1,0 +1,11 @@
+{
+  "conferunsApp": {
+    "SpecialParticipantType": {
+      "null": "",
+      "STUDENT": "STUDENT",
+      "DISABLE": "DISABLE",
+      "WOMAN": "WOMAN",
+      "VETERAN": "VETERAN"
+    }
+  }
+}

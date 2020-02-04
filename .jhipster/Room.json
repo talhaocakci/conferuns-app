@@ -20,20 +20,21 @@
     ],
     "relationships": [
         {
-            "relationshipName": "place",
-            "otherEntityName": "place",
             "relationshipType": "many-to-one",
+            "otherEntityName": "place",
+            "otherEntityRelationshipName": "rooms",
+            "relationshipName": "place",
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190420041223",
+    "changelogDate": "20200202183649",
     "entityTableName": "room",
     "dto": "mapstruct",
     "pagination": "no",
     "service": "serviceImpl",
     "jpaMetamodelFiltering": false,
     "fluentMethods": true,
-    "clientRootFolder": "conferuns",
-    "applications": "*",
-    "microserviceName": "conferuns"
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
 }

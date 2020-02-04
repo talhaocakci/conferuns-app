@@ -1,0 +1,176 @@
+entity Conference
+{
+	conferenceId Long,
+	mainName String, //main_name (dev not, goto gibi)
+    subName String, // Go To Amsterdam gibi
+    mainTopic ConferenceTopic,
+	subTopic String,
+	description String,
+	isFree Boolean,
+	language Language,
+	startDate Instant,
+    endDate Instant,
+	lastTalkSubmissionTime Instant
+}
+
+entity Place {
+  placeId Long,
+  name String,
+  country String,
+  state String,
+  city String,
+  district String,
+  street String,
+  doorNo String
+}
+
+entity Room {
+	roomId Long,
+    roomName String,
+    floor Integer,
+    capacity Integer
+    // other attributes. bilg var mi engelli koltugu var mi gibi
+}
+
+enum TalkStatus{
+	DRAFT, IN_REVIEW, NEED_MORE_REVIEW, REJECTED, APPROVED
+}
+
+enum FileStatus{
+	DRAFT, IN_REVIEW, NEED_MORE_REVIEW, REJECTED, APPROVED
+}
+
+enum FileReviewStatus{
+	NEED_MORE_REVIEW, REJECTED, APPROVED
+}
+
+entity Talk {
+	language Language,
+	mainTopic String, //(Programlama)
+	subTopic String, //(Mikroservis)
+    status TalkStatus
+}
+
+entity TalkTag {
+	tag String
+}
+
+entity File {
+	name String,
+    path String,
+    type String,
+    status FileStatus
+}
+
+entity FileReview {
+	date Instant,
+    comment String,
+    reviewer String,
+    status FileReviewStatus
+}
+
+entity Topic {
+	category String, // bunlari bi dusunmem lazim, nasil tree yapariz
+    subCategory String,
+    topicName String
+}
+
+entity Subject {
+	topic ConferenceTopic, // bunlari bi dusunmem lazim, nasil tree yapariz
+    difficulty Integer, // 10 uzerinden zorluk'
+    audience Audience
+}
+
+enum Audience {
+BEGINNER, MID_LEVEL, EXPERIENCED
+}
+
+entity ScheduleItem {
+    fromTime Instant,
+    tillTime Instant
+}
+
+entity Fee {
+	conferenceId Long,
+    feeLabel String, // early bird gibi
+	fromTime Instant,
+	tillTime Instant,
+	price Double,
+	specialTo SpecialParticipantType
+}
+
+enum SpecialParticipantType {
+	STUDENT, DISABLE, WOMAN, VETERAN
+}
+
+
+enum ConferenceTopic {
+	SOFTWARE_ENGINEERING,
+	FINANCE,
+	SPORTS
+}
+
+enum Language {
+	ENGLISH,
+	TURKISH,
+    FRENCH,
+    SPANISH
+}
+
+entity TalkParticipant {
+    checkedIn Boolean,
+    plannedToGo Boolean,
+    favorited Boolean
+}
+
+entity Presenter {
+	presenterId Long,
+
+	totalTechnicalPoints Double,
+	averageTechnicalPoints Double,
+	totalSpeakingPoints Double,
+	averageSpeakingPoints Double
+	totalExcitementPoints Double,
+	averageExcitementPoints Double
+}
+
+entity TalkHistory {
+    date Instant,
+	totalAudience Long,
+    totalTechnicalPoints Double,
+	averageTechnicalPoints Double,
+	totalSpeakingPoints Double,
+	averageSpeakingPoints Double
+	totalExcitementPoints Double,
+	averageExcitementPoints Double
+}
+
+relationship ManyToMany {
+	Conference{places} to Place{conferences},
+    TalkParticipant{talks} to Talk{participants},
+    // ayni konusma birden fazla sessionda ya da konferansta yapilabilir
+    Conference{talks} to Talk{conferences},
+    TalkTag{talk} to Talk{tags}
+}
+
+relationship OneToMany {
+	File{reviews} to FileReview,
+	Talk{files} to File,
+    Place{rooms} to Room,
+    Conference{scheduleItems} to ScheduleItem,
+    Presenter{talks} to TalkHistory
+}
+
+relationship OneToOne {
+	ScheduleItem{talk} to Talk,
+    Talk{presenter} to Presenter,
+    Presenter{user} to User,
+    TalkHistory{talk} to Talk
+}
+
+// Use Data Transfert Objects (DTO)
+ dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+

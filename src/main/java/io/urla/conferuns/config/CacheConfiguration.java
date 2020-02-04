@@ -42,6 +42,33 @@ public class CacheConfiguration {
             createCache(cm, io.urla.conferuns.domain.User.class.getName());
             createCache(cm, io.urla.conferuns.domain.Authority.class.getName());
             createCache(cm, io.urla.conferuns.domain.User.class.getName() + ".authorities");
+            createCache(cm, io.urla.conferuns.domain.Conference.class.getName());
+            createCache(cm, io.urla.conferuns.domain.Conference.class.getName() + ".scheduleItems");
+            createCache(cm, io.urla.conferuns.domain.Conference.class.getName() + ".places");
+            createCache(cm, io.urla.conferuns.domain.Conference.class.getName() + ".talks");
+            createCache(cm, io.urla.conferuns.domain.Place.class.getName());
+            createCache(cm, io.urla.conferuns.domain.Place.class.getName() + ".rooms");
+            createCache(cm, io.urla.conferuns.domain.Place.class.getName() + ".conferences");
+            createCache(cm, io.urla.conferuns.domain.Room.class.getName());
+            createCache(cm, io.urla.conferuns.domain.Talk.class.getName());
+            createCache(cm, io.urla.conferuns.domain.Talk.class.getName() + ".files");
+            createCache(cm, io.urla.conferuns.domain.Talk.class.getName() + ".participants");
+            createCache(cm, io.urla.conferuns.domain.Talk.class.getName() + ".conferences");
+            createCache(cm, io.urla.conferuns.domain.Talk.class.getName() + ".tags");
+            createCache(cm, io.urla.conferuns.domain.TalkTag.class.getName());
+            createCache(cm, io.urla.conferuns.domain.TalkTag.class.getName() + ".talks");
+            createCache(cm, io.urla.conferuns.domain.File.class.getName());
+            createCache(cm, io.urla.conferuns.domain.File.class.getName() + ".reviews");
+            createCache(cm, io.urla.conferuns.domain.FileReview.class.getName());
+            createCache(cm, io.urla.conferuns.domain.Topic.class.getName());
+            createCache(cm, io.urla.conferuns.domain.Subject.class.getName());
+            createCache(cm, io.urla.conferuns.domain.ScheduleItem.class.getName());
+            createCache(cm, io.urla.conferuns.domain.Fee.class.getName());
+            createCache(cm, io.urla.conferuns.domain.TalkParticipant.class.getName());
+            createCache(cm, io.urla.conferuns.domain.TalkParticipant.class.getName() + ".talks");
+            createCache(cm, io.urla.conferuns.domain.Presenter.class.getName());
+            createCache(cm, io.urla.conferuns.domain.Presenter.class.getName() + ".talks");
+            createCache(cm, io.urla.conferuns.domain.TalkHistory.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

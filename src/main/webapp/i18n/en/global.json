@@ -7,6 +7,20 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entities",
+        "conference": "Conference",
+        "place": "Place",
+        "room": "Room",
+        "talk": "Talk",
+        "talkTag": "Talk Tag",
+        "file": "File",
+        "fileReview": "File Review",
+        "topic": "Topic",
+        "subject": "Subject",
+        "scheduleItem": "Schedule Item",
+        "fee": "Fee",
+        "talkParticipant": "Talk Participant",
+        "presenter": "Presenter",
+        "talkHistory": "Talk History",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

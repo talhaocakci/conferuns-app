@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity TalkParticipant.
+    -->
+    <changeSet id="20190420041232-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="talk_participant_id"
+                                 baseTableName="talk_participant_talks"
+                                 constraintName="fk_talk_participant_talks_talk_participant_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="talk_participant"/>
+
+        <addForeignKeyConstraint baseColumnNames="talks_id"
+                                 baseTableName="talk_participant_talks"
+                                 constraintName="fk_talk_participant_talks_talks_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="talk"/>
+        
+    </changeSet>
+</databaseChangeLog>

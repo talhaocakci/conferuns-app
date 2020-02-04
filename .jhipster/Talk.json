@@ -60,14 +60,14 @@
             "ownerSide": false
         }
     ],
-    "changelogDate": "20190420041224",
+    "changelogDate": "20200202183650",
     "entityTableName": "talk",
     "dto": "mapstruct",
     "pagination": "no",
     "service": "serviceImpl",
     "jpaMetamodelFiltering": false,
     "fluentMethods": true,
-    "clientRootFolder": "conferuns",
-    "applications": "*",
-    "microserviceName": "conferuns"
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
 }
