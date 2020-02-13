@@ -9,7 +9,7 @@ RUN adduser -D -s /bin/sh urla
 WORKDIR /home/urla
 
 ADD src/main/docker/entrypoint.sh /home/urla/entrypoint.sh
-ADD ./target/*.war /home/urla/app.war
+ADD ./target/*.jar /home/urla/app.jar
 RUN chmod 755 entrypoint.sh && chown urla:urla /home/urla/entrypoint.sh
 
 RUN apk update && apk add bash
